@@ -1,0 +1,8 @@
+<section>
+  <h2>Projetos</h2>
+  <div class="projeto-card" *ngFor="let projeto of projetos">
+    <h3>{{ projeto.nome }}</h3>
+    <p>{{ projeto.descricao }}</p>
+    <a [href]="projeto.link" target="_blank">Ver no GitHub</a>
+  </div>
+</section>
