@@ -1,0 +1,56 @@
+body {
+    background-color: #0d1117; /* Fundo dark estilo GitHub */
+    color: #c9d1d9;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .tech-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #00eaff; /* Neon azul */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .tech-card {
+    background: rgba(255, 255, 255, 0.1); /* Transparente (Glassmorphism) */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 255, 255, 0.2); /* Efeito neon */
+  }
+  
+  .tech-card h3 {
+    color: #ff00ff; /* Neon roxo */
+  }
+  
+  a {
+    color: #00eaff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    color: #ff00ff;
+    text-decoration: underline;
+  }
+  
+  /* Animação para efeito futurista */
+  @keyframes neon-glow {
+    0% { text-shadow: 0 0 5px #00eaff; }
+    50% { text-shadow: 0 0 15px #00eaff; }
+    100% { text-shadow: 0 0 5px #00eaff; }
+  }
+  
+  h2, h3 {
+    animation: neon-glow 1.5s infinite alternate;
+  }
+  
