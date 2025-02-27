@@ -1,51 +1,85 @@
+/* Estilos globais da seção hero */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+/* Container da foto de perfil */
+.profile-container {
+  perspective: 1000px;
+}
+
+/* Foto de perfil com efeito 3D */
+.profile-pic {
+  width: 300px; /* Tamanho maior */
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transform: rotateY(20deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-pic:hover {
+  transform: rotateY(0) scale(1.1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Container do texto */
+.text-container {
+  text-align: left;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+/* Título principal */
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #ffcc00; /* Cor de destaque */
+}
+
+/* Subtítulo (Desenvolvedor Full Stack) */
+.subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Texto discreto (Estudante de Engenharia de Software) */
+.student-text {
+  font-size: 1.2rem;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Animações */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-  
-  .hero-content {
-    max-width: 600px;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    font-size: 1.5rem;
-  }
-  
-  /* Animações */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-  }
+}

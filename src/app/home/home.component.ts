@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  // URL da sua foto do GitHub
-  fotoPerfil = 'https://github.com/LeandroBryto.png';
+  fotoPerfil = 'https://github.com/LeandroBryto.png'; // URL da sua foto do GitHub
 }
